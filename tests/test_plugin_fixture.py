@@ -67,6 +67,44 @@ def test_nb_regression_cmndline_setting_init(testdir):
                         # the following are the defaults for pytest-cov
                         "cov_source": (),
                         "cov_config": ".coveragerc",
+                        # expected diff_replace loaded from pytest config in tox.ini
+                        "diff_replace": (
+                            (
+                                "/cells/*/outputs/*/text",
+                                "\\/([A-z0-9-_+]+\\/)*[A-z0-9-_+]+\\.ipynb",
+                                "/.../<filename>.ipynb",
+                            ),
+                            (
+                                "/cells/*/outputs/*/text",
+                                "rootdir\\:\\s\\/([A-z0-9-_+]+\\/)*[A-z0-9-_+]+",
+                                "rootdir: /.../<dir>",
+                            ),
+                            (
+                                "/cells/*/outputs/*/text",
+                                "in\\s[\\.0-9]+\\sseconds",
+                                "in xxx seconds",
+                            ),
+                            (
+                                "/cells/*/outputs/*/text",
+                                "platform\\s(darwin|linux).*\\n",
+                                "platform info ...\\n",
+                            ),
+                            (
+                                "/cells/*/outputs/*/text",
+                                "plugins\\:\\s.*\\n",
+                                "plugin info ...\\n",
+                            ),
+                            (
+                                "/cells/*/outputs/*/text",
+                                "exec_cwd\\=\\\\\\'\\/([A-z0-9-_+]+\\/)*[A-z0-9-_+]+\\\\\\'",
+                                "exec_cwd=/.../<dir>",
+                            ),
+                            (
+                                "/cells/*/outputs/*/traceback",
+                                "\\<ipython\\-input\\-[\\-0-9a-zA-Z]*\\>",
+                                "<ipython-input-XXXX>",
+                            ),
+                        ),
                     }
                 )
             )
