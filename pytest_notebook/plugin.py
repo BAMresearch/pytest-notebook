@@ -11,6 +11,7 @@ For more information on writing pytest plugins see:
 
 """
 import os
+import fnmatch
 from pathlib import Path
 import shlex
 
@@ -264,16 +265,20 @@ def nb_regression(pytestconfig):
     return NBRegressionFixture(**kwargs)
 
 
-def pytest_collect_file(path, parent):
-    """Collect Jupyter notebooks using the specified pytest hook."""
+def pytest_collect_file(file_path: pathlib.Path, path: LEGACY_PATH, parent):
+    """Compatible with both old and new pytest versions."""
     kwargs, other_args = gather_config_options(parent.config)
+
+    p = file_path if file_path is not None else Path(path)
+
     if other_args.get("nb_test_files", False) and any(
-        path.fnmatch(pat) for pat in other_args.get("nb_file_fnmatch", ["*.ipynb"])
+        fnmatch.fnmatch(p.name, pat)
+        for pat in other_args.get("nb_file_fnmatch", ["*.ipynb"])
     ):
         try:
-            return JupyterNbCollector.from_parent(parent, path=Path(path))
+            return JupyterNbCollector.from_parent(parent, path=p)
         except AttributeError:
-            return JupyterNbCollector(path, parent)
+            return JupyterNbCollector(p, parent)
 
 
 class JupyterNbCollector(pytest.File):
