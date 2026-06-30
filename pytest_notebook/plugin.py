@@ -265,7 +265,7 @@ def nb_regression(pytestconfig):
     return NBRegressionFixture(**kwargs)
 
 
-def pytest_collect_file(file_path: Path, path: LEGACY_PATH, parent):
+def pytest_collect_file(file_path: Path, path, parent):
     """Compatible with both old and new pytest versions."""
     kwargs, other_args = gather_config_options(parent.config)
 
