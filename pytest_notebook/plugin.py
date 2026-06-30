@@ -10,8 +10,8 @@ For more information on writing pytest plugins see:
 - https://docs.pytest.org/en/latest/_modules/_pytest/hookspec.html
 
 """
-import os
 import fnmatch
+import os
 from pathlib import Path
 import shlex
 
@@ -265,7 +265,7 @@ def nb_regression(pytestconfig):
     return NBRegressionFixture(**kwargs)
 
 
-def pytest_collect_file(file_path: pathlib.Path, path: LEGACY_PATH, parent):
+def pytest_collect_file(file_path: Path, path: LEGACY_PATH, parent):
     """Compatible with both old and new pytest versions."""
     kwargs, other_args = gather_config_options(parent.config)
 
