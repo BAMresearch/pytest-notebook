@@ -269,7 +269,7 @@ def pytest_collect_file(file_path: Path, parent):
     """Compatible with both old and new pytest versions."""
     kwargs, other_args = gather_config_options(parent.config)
 
-    p = file_path # if file_path is not None else Path(path)
+    p = file_path  # if file_path is not None else Path(path)
 
     if other_args.get("nb_test_files", False) and any(
         fnmatch.fnmatch(p.name, pat)
