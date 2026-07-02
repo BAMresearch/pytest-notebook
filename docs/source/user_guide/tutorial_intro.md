@@ -13,7 +13,7 @@ kernelspec:
 
 (pytest_notebook_by_example)=
 
-# pytest-notebook by example
+# pytest-notebook-next by example
 
 :::{seealso}
 This notebook was rendered with [myst-nb](https://myst-nb.readthedocs.io): {nb-download}`tutorial_intro.ipynb`
@@ -23,7 +23,7 @@ This notebook was rendered with [myst-nb](https://myst-nb.readthedocs.io): {nb-d
 
 ## Python API
 
-The principal component of `pytest-notebook` is the
+The principal component of `pytest-notebook-next` is the
 {py:class}`~pytest_notebook.nb_regression.NBRegressionFixture` class,
 which is an [attrs](http://www.attrs.org) class, whose parameters can be instantiated or set via attributes.
 

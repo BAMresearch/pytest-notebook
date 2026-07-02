@@ -13,7 +13,7 @@ kernelspec:
 
 (configuring_pytest_notebook)=
 
-# Configuring pytest-notebook
+# Configuring pytest-notebook-next
 
 :::{seealso}
 This notebook was rendered with [myst-nb](https://myst-nb.readthedocs.io): {nb-download}`tutorial_config.ipynb`

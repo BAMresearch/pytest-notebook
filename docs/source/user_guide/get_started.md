@@ -6,20 +6,20 @@
 To install from PyPi:
 
 ```shell
->> pip install pytest-notebook
+>> pip install pytest-notebook-next
 ```
 
 To install from Conda:
 
 ```shell
->> conda install -c conda-forge pytest-notebook
+>> conda install -c conda-forge pytest-notebook-next
 ```
 
 To install the development version:
 
 ```shell
->> git clone https://github.com/chrisjsewell/pytest-notebook .
->> cd pytest-notebook
+>> git clone https://github.com/BAMresearch/pytest-notebook-next .
+>> cd pytest-notebook-next
 >> pip install -e ".[code_style,testing,docs]"
 ```
 
@@ -44,7 +44,7 @@ The code style is tested using [flake8](http://flake8.pycqa.org),
 with the configuration set in `.flake8`, and
 [black](https://github.com/ambv/black).
 
-Installing with `pytest-notebook[code_style]` makes the
+Installing with `pytest-notebook-next[code_style]` makes the
 [pre-commit](https://pre-commit.com/) package available, which will
 ensure these tests are passed by reformatting the code and testing for
 lint errors before submitting a commit. It can be set up by:
@@ -68,10 +68,10 @@ The documentation can be created locally by:
 >> tox -e py37-docs-update
 ```
 
-[ci-badge]: https://github.com/chrisjsewell/pytest-notebook/workflows/continuous-integration/badge.svg?branch=master
-[ci-link]: https://github.com/chrisjsewell/pytest-notebook
-[cov-badge]:https://codecov.io/gh/chrisjsewell/pytest-notebook/branch/master/graph/badge.svg
-[cov-link]: https://codecov.io/gh/chrisjsewell/pytest-notebook
+[ci-badge]: https://github.com/BAMresearch/pytest-notebook-next/workflows/continuous-integration/badge.svg?branch=main
+[ci-link]: https://github.com/BAMresearch/pytest-notebook-next
+[cov-badge]:https://codecov.io/gh/BAMresearch/pytest-notebook-next/branch/master/graph/badge.svg
+[cov-link]: https://codecov.io/gh/BAMresearch/pytest-notebook-next
 [rtd-badge]: https://readthedocs.org/projects/pytest-notebook/badge
 [rtd-link]: http://pytest-notebook.readthedocs.io/
 [pypi-badge]: https://img.shields.io/pypi/v/pytest-notebook.svg

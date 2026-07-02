@@ -1,5 +1,5 @@
-pytest-notebook
-===============
+pytest-notebook-next
+====================
 
 .. toctree::
    :maxdepth: 1
@@ -86,13 +86,13 @@ License
 
 Distributed under the terms of the
 `BSD-3 <http://opensource.org/licenses/BSD-3-Clause>`__ license,
-``pytest-notebook`` is free and open source software.
+``pytest-notebook-next`` is free and open source software.
 
 Issues
 ------
 
 If you encounter any problems, please `file an
-issue <https://github.com/chrisjsewell/pytest-notebook/issues>`__ along
+issue <https://github.com/BAMresearch/pytest-notebook-next/issues>`__ along
 with a detailed description.
 
 Acknowledgements

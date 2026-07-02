@@ -37,7 +37,7 @@ dependencies = [
 ]
 
 [project.urls]
-Source = "https://github.com/chrisjsewell/pytest-notebook"
+Source = "https://github.com/BAMresearch/pytest-notebook-next"
 Documentation = "https://pytest-notebook.readthedocs.io"
 
 [project.optional-dependencies]

@@ -1,5 +1,5 @@
 #
-# pytest-notebook documentation build configuration file
+# pytest-notebook-next documentation build configuration file
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -27,9 +27,9 @@ exclude_patterns = ["_build", "**/.ipynb_checkpoints", "**/example_nbs"]
 master_doc = "index"
 
 # General information about the project.
-project = "pytest-notebook"
-copyright = "2019, Chris Sewell"
-author = "Chris Sewell"
+project = "pytest-notebook-next"
+copyright = "Ingo Breßler (2026), Chris Sewell (2019)"
+author = "Chris Sewell, Ingo Breßler"
 # The full version, including alpha/beta/rc tags, will replace |release|
 release = pytest_notebook.__version__
 # The short X.Y version, will replace |version|
@@ -76,8 +76,8 @@ todo_include_todos = False
 
 html_theme = "sphinx_book_theme"
 html_theme_options = {
-    "repository_url": "https://github.com/chrisjsewell/pytest-notebook",
-    "repository_branch": "master",
+    "repository_url": "https://github.com/BAMresearch/pytest-notebook-next",
+    "repository_branch": "main",
     "path_to_docs": "docs/source",
     "use_edit_page_button": True,
     "use_issues_button": True,

@@ -1,4 +1,4 @@
-# pytest-notebook
+# pytest-notebook-next
 
 [![CI][ci-badge]][ci-link]
 [![Coverage][cov-badge]][cov-link]
@@ -7,7 +7,7 @@
 [![Conda][conda-badge]][conda-link]
 [![Code style: black][black-badge]][black-link]
 
-A [pytest](https://github.com/pytest-dev/pytest) plugin for regression testing and regenerating [Jupyter Notebooks](https://jupyter.org/).
+A [pytest](https://github.com/pytest-dev/pytest) plugin for regression testing and regenerating [Jupyter Notebooks](https://jupyter.org/). It is largely based on (the unmaintained) [pytest-notebook](https://github.com/chrisjsewell/pytest-notebook) by Chris Sewell under the same [BSD-3](http://opensource.org/licenses/BSD-3-Clause) license.
 
 ![Example Test](pytest-notebook-screenshot.png)
 
@@ -49,20 +49,20 @@ regenerate the notebooks, saving the new outputs.
 To install from [Conda](https://docs.conda.io) (recommended):
 
 ```shell
-conda install -c conda-forge pytest-notebook
+conda install -c conda-forge pytest-notebook-next
 ```
 
 To install *via* [pip](https://pypi.org/project/pip/) from [PyPI](https://pypi.org/project):
 
 ```shell
-pip install pytest-notebook
+pip install pytest-notebook-next
 ```
 
 To install the development version:
 
 ```shell
-git clone https://github.com/chrisjsewell/pytest-notebook .
-cd pytest-notebook
+git clone https://github.com/BAMresearch/pytest-notebook-next .
+cd pytest-notebook-next
 pip install --upgrade pip
 pip install -e .
 # pip install -e .[code_style,testing,docs] # install extras for more features
@@ -75,9 +75,9 @@ See the documentation at: http://pytest-notebook.readthedocs.io/
 If you want to test some sample notebooks, add the `--nb-test-files` flag:
 
 ```shell
-git clone https://github.com/chrisjsewell/pytest-notebook
-cd pytest-notebook/examples
-pip install pytest ipykernel pytest-notebook
+git clone https://github.com/BAMresearch/pytest-notebook-next
+cd pytest-notebook-next/examples
+pip install pytest ipykernel pytest-notebook-next
 pytest --nb-test-files *.ipynb
 ```
 
@@ -106,13 +106,13 @@ The code style is tested using [flake8](http://flake8.pycqa.org),
 with the configuration set in `.flake8`,
 and code should be formatted with [black](https://github.com/ambv/black).
 
-Installing with `pytest-notebook[code_style]` makes the [pre-commit](https://pre-commit.com/)
+Installing with `pytest-notebook-next[code_style]` makes the [pre-commit](https://pre-commit.com/)
 package available, which will ensure these tests are passed by reformatting the code
 and testing for lint errors before submitting a commit.
 It can be setup by:
 
 ```shell
-cd pytest-notebook
+cd pytest-notebook-next
 pre-commit install
 ```
 
@@ -128,21 +128,21 @@ Editors like VS Code also have automatic code reformat utilities, which can adhe
 ## License
 
 Distributed under the terms of the [BSD-3](http://opensource.org/licenses/BSD-3-Clause) license,
-`pytest-notebook` is free and open source software.
+`pytest-notebook-next` is free and open source software.
 
 ## Issues
 
-If you encounter any problems, please [file an issue](https://github.com/chrisjsewell/pytest-notebook/issues) along with a detailed description.
+If you encounter any problems, please [file an issue](https://github.com/BAMresearch/pytest-notebook-next/issues) along with a detailed description.
 
 ## Acknowledgements
 
 - [nbdime](https://nbdime.readthedocs.io)
 - [nbval](https://github.com/computationalmodelling/nbval)
 
-[ci-badge]: https://github.com/chrisjsewell/pytest-notebook/workflows/continuous-integration/badge.svg?branch=master
-[ci-link]: https://github.com/chrisjsewell/pytest-notebook
-[cov-badge]:https://codecov.io/gh/chrisjsewell/pytest-notebook/branch/master/graph/badge.svg
-[cov-link]: https://codecov.io/gh/chrisjsewell/pytest-notebook
+[ci-badge]: https://github.com/BAMresearch/pytest-notebook-next/workflows/continuous-integration/badge.svg?branch=main
+[ci-link]: https://github.com/BAMresearch/pytest-notebook-next
+[cov-badge]:https://codecov.io/gh/BAMresearch/pytest-notebook-next/branch/master/graph/badge.svg
+[cov-link]: https://codecov.io/gh/BAMresearch/pytest-notebook-next
 [rtd-badge]: https://readthedocs.org/projects/pytest-notebook/badge
 [rtd-link]: http://pytest-notebook.readthedocs.io/
 [pypi-badge]: https://img.shields.io/pypi/v/pytest-notebook.svg
