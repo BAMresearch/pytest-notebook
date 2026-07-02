@@ -54,11 +54,11 @@ code_style = [
   "doc8>=0.8.0,<1.2.0",
 ]
 docs = [
-  "sphinx>=3",
+  "sphinx",
   "pyyaml",
-  "sphinx-book-theme~=1.0.1",
-  "myst-nb~=1.0",
-  "coverage~=5.0",
+  "sphinx-book-theme",
+  "myst-nb",
+  "coverage",
   "pytest-cov",
   "black",
 ]
