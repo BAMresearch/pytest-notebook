@@ -32,7 +32,7 @@ def coverage_code_setup(
     source: Optional[str], config_file: Union[None, str, Path]
 ) -> str:
     source = f"{source!r}" if source else "None"
-    config_file = f"{config_file!r}" if config_file else "None"
+    config_file = f"{config_file!r}" if config_file else "False"
     return dedent(
         f"""\
         import coverage as __coverage
