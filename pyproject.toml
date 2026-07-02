@@ -50,8 +50,8 @@ testing = [
   "beautifulsoup4",
 ]
 code_style = [
-  "pre-commit~=3.5.0",
-  "doc8>=0.8.0,<1.2.0",
+  "pre-commit",
+  "doc8",
 ]
 docs = [
   "sphinx",
@@ -77,3 +77,6 @@ extend-ignore = ["ISC001"]
 
 [tool.ruff.lint.isort]
 force-sort-within-sections = true
+
+[tool.doc8]
+max-line-length = 100
